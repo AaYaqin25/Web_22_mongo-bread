@@ -1,0 +1,58 @@
+<%- include('./partials/header')%>
+    <div class="container">
+        <h1>Edit Data</h1>
+    </div>
+    <br>
+    <form action="" method="post">
+        <div class="container">
+
+            <div class="row">
+                <label for="id" class="col-sm-1">ID</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="id" id="id" value="<%= data._id%>" disabled>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="string" class="col-sm-1">String</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="string" id="string" value="<%= data.string%>">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="integer" class="col-sm-1">Integer</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="integer" id="integer" value="<%= data.integer%>">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="float" class="col-sm-1">Float</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="float" id="float" value="<%= data.float%>">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="date" class="col-sm-1">Date</label>
+                <div class="col-sm-3">
+                    <input type="date" class="form-control" name="date" id="date" value="<%= data.date ? moment(data.date).format('YYYY-MM-DD') : '' %>">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <label for="boolean" class="col-sm-1">Boolean</label>
+                <div class="col-sm-5">
+                    <select class="form-select" aria-label="Default select example" name="boolean" id="boolean">
+                        <option value="true" <%= data.boolean == 'true' ? 'selected' : ''%>>true</option>
+                        <option value="false"<%= data.boolean == 'false' ? 'selected' : ''%>>false</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary"> <i class="fa-solid fa-pen-to-square"></i> Update</button>
+            <a href="/" class="btn btn-warning"> <i class="fa-solid fa-house"></i> Back</a>
+        </div>
+    </form>
+    <%- include('./partials/footer')%>

@@ -1,0 +1,52 @@
+<%- include('./partials/header')%>
+<div class="container">
+<h1>Add Data</h1>
+</div>
+<br>
+  <form action="" method="post">
+    <div class="container">
+
+      <div class="row">
+        <label for="string" class="col-sm-1">String</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" name="string" id="string" placeholder="String">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="integer" class="col-sm-1">Integer</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" name="integer" id="integer" placeholder="Integer">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="float" class="col-sm-1">Float</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" name="float" id="float" placeholder="Float">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="date" class="col-sm-1">Date</label>
+        <div class="col-sm-3">
+          <input type="date" class="form-control" name="date" id="date" placeholder="end date">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <label for="boolean" class="col-sm-1">Boolean</label>
+        <div class="col-sm-5">
+          <select class="form-select" aria-label="Default select example" name="boolean" id="boolean">
+            <option selected>Choose the boolean</option>
+            <option value="true">true</option>
+            <option value="false">false</option>
+          </select>
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+      <a href="/" class="btn btn-warning"> <i class="fa-solid fa-house"></i> Back</a>
+    </div>
+  </form>
+  <%- include('./partials/footer')%>
